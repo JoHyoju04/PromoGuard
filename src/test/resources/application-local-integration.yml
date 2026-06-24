@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: ${LOCAL_TEST_DB_URL:jdbc:postgresql://localhost:5432/promoguard}
+    username: ${LOCAL_TEST_DB_USERNAME:promoguard}
+    password: ${LOCAL_TEST_DB_PASSWORD:promoguard}
+  data:
+    redis:
+      host: ${LOCAL_TEST_REDIS_HOST:localhost}
+      port: ${LOCAL_TEST_REDIS_PORT:6379}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+  flyway:
+    enabled: true
+
+promoguard:
+  notification:
+    worker-enabled: false
