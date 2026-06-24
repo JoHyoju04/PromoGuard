@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: promoguard
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:15432/promoguard}
+    username: ${DB_USERNAME:promoguard}
+    password: ${DB_PASSWORD:promoguard}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+  flyway:
+    enabled: true
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+
+promoguard:
+  redis-lock:
+    ttl: ${REDIS_LOCK_TTL:5s}
+  notification:
+    worker-enabled: ${NOTIFICATION_WORKER_ENABLED:true}
+    batch-size: ${NOTIFICATION_WORKER_BATCH_SIZE:50}
+    fixed-delay: ${NOTIFICATION_WORKER_FIXED_DELAY:1000}
+    max-retry-count: ${NOTIFICATION_MAX_RETRY_COUNT:3}
