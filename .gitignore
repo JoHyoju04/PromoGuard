@@ -1,0 +1,52 @@
+HELP.md
+
+# Gradle
+.gradle/
+build/
+target/
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# STS
+.apt_generated/
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans
+.sts4-cache/
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+# OS / logs
+.DS_Store
+Thumbs.db
+*.log
+logs/
+
+# Local environment / secrets
+.env
+.env.*
+!.env.example
+*.local
+*.local.yml
+*.local.yaml
+*.local.properties
+.testcontainers.properties
+
+# Runtime temp files
+*.pid
+*.tmp
+tmp/
